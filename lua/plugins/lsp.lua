@@ -218,6 +218,7 @@ return {
             -- ts_ls = {},
             --
 
+            ruff = {}, -- python
             zls = {},
             lua_ls = {
                 capabilities = {},

@@ -46,8 +46,8 @@ return {
             keymap = {
                 -- Remove the preset and define custom mappings
                 -- preset = "default", -- Removed to fully customize
-                ["<Tab>"] = { "select_next" }, -- Tab to go down
-                ["<S-Tab>"] = { "select_prev" }, -- Shift-Tab to go up
+                ["<Tab>"] = { "select_next", "fallback" }, -- Tab to go down
+                ["<S-Tab>"] = { "select_prev", "fallback" }, -- Shift-Tab to go up
                 ["<CR>"] = { "accept", "fallback" }, -- Enter to accept (CR = Carriage Return)
                 ["<C-Space>"] = { "show", "show_documentation" }, -- Keep default behavior
                 ["<C-e>"] = { "hide" }, -- Keep default to close menu

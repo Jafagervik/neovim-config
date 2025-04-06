@@ -17,6 +17,7 @@ return {
                 "zig",
                 "rust",
                 "python",
+                "java",
             },
             auto_install = true,
             sync_install = false,

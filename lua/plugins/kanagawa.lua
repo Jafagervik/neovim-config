@@ -8,7 +8,7 @@ return {
             -- dark = "ef-elea-dark",
             -- dark = "ef-owl",
             -- dark = "ef-bio",
-            transparent = true,
+            transparent = false,
             styles = {
                 comments = { italic = false },
             },
