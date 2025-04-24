@@ -4,7 +4,7 @@ return {
         formatters_by_ft = {
             lua = { "stylua" },
             -- Conform will run multiple formatters sequentially
-            python = { "ruff" },
+            python = { "ruff_fix", "ruff_format" },
             -- You can customize some of the format options for the filetype (:help conform.format)
             rust = { "rustfmt" },
             -- Conform will run the first available formatter
@@ -15,6 +15,18 @@ return {
         format_on_save = {
             timeout_ms = 500,
             lsp_format = "fallback",
+        },
+        formatters = {
+            ruff_fix = {
+                command = "ruff",
+                args = { "check", "--fix", "--exit-zero", "$FILENAME" },
+                stdin = false,
+            },
+            ruff_format = {
+                command = "ruff",
+                args = { "format", "$FILENAME" },
+                stdin = false,
+            },
         },
     },
 }

@@ -218,7 +218,25 @@ return {
             -- ts_ls = {},
             --
 
-            ruff = {}, -- python
+            pyright = {
+                settings = {
+                    pyright = {
+                        disableOrganizeImports = true, -- Using Ruff
+                    },
+                    python = {
+                        analysis = {
+                            ignore = { "*" }, -- Using Ruff
+                            typeCheckingMode = "off", -- Using mypy
+                        },
+                    },
+                },
+            },
+            ruff = {
+                settings = {
+                    args = {}, -- Add custom Ruff arguments if needed
+                },
+            },
+            -- ruff = {}, -- python
             zls = {},
             lua_ls = {
                 capabilities = {},
